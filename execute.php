@@ -18,17 +18,17 @@ $text = isset($message['text']) ? $message['text'] : "";
 
 $response = '';
 
-if($message == 'ciao')
+if($text == 'ciao')
 {
 	$response = 'ciao';
 }	
-if($message == 'come va')
+if($text == 'come va')
 {
 	$response = 'sono un bot, non ho uno stato fisico';
 }	
 
 
 header("Content-Type: application/json");
-$parameters = array('chat_id' => $chatId, "text" => $text);
+$parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
 echo json_encode($parameters);
