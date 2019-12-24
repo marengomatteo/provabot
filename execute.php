@@ -16,19 +16,27 @@ $username = isset($message['chat']['username']) ? $message['chat']['username'] :
 $date = isset($message['date']) ? $message['date'] : "";
 $text = isset($message['text']) ? $message['text'] : "";
 
+$text = trim($text);
+$text = strtolower($text);
+header("Content-Type: application/json");
 $response = '';
 
-if($text == 'ciao')
+if(strpos($text, "/start") === 0 || $text=="ciao")
 {
-	$response = 'ciao';
-}	
-if($text == 'come va')
+	$response = "Ciao $firstname, benvenuto!";
+}
+elseif($text=="come va")
 {
-	$response = 'sono un bot, non ho uno stato fisico';
-}	
-
-
-header("Content-Type: application/json");
+	$response = "sono un bot bello, non ho nessun stato fisico, piuttosto tu come te la passi?";
+}
+elseif($text=="bene")
+{
+	$response = "menomale, allora facciamo un po' di soldi?";
+}
+else
+{
+	$response = "Comando non valido!";
+}
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
 echo json_encode($parameters);
