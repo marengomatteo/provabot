@@ -37,10 +37,7 @@ elseif(strpos($text, "/invio") === 0)
 {
 	$response = "$firstname facciamo sti soldi";
 }
-else
-{
-	$response = "Comando non valido!";
-}	
+	
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
 echo json_encode($parameters);
