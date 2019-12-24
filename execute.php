@@ -37,6 +37,10 @@ elseif(strpos($text, "/invio") === 0)
 {
 	$response = "$firstname facciamo sti soldi";
 }
+elseif(strpos($text, "/help") === 0)
+{
+	$response = "Prova ha un solo comando disponibile: /invio";
+}
 	
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
