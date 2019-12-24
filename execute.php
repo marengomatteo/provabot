@@ -16,8 +16,17 @@ $username = isset($message['chat']['username']) ? $message['chat']['username'] :
 $date = isset($message['date']) ? $message['date'] : "";
 $text = isset($message['text']) ? $message['text'] : "";
 
-$text = trim($text);
-$text = strtolower($text);
+$response = '';
+
+if($message == 'ciao')
+{
+	$response = 'ciao';
+}	
+if($message == 'come va')
+{
+	$response = 'sono un bot, non ho uno stato fisico';
+}	
+
 
 header("Content-Type: application/json");
 $parameters = array('chat_id' => $chatId, "text" => $text);
