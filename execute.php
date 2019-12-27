@@ -21,25 +21,18 @@ $text = strtolower($text);
 header("Content-Type: application/json");
 $response = '';
 
-if(strpos($text, "/start") === 0 || $text=="ciao")
+if(strpos($text, "/start") === 0)
 {
-	$response = "Ciao $firstname, benvenuto!";
-}
-elseif($text=="come va")
-{
-	$response = "sono un bot bello, non ho nessun stato fisico, piuttosto tu come te la passi?";
-}
-elseif($text=="bene")
-{
-	$response = "menomale, allora facciamo un po' di soldi?";
-}
-elseif(strpos($text, "/invio") === 0)
-{
-	$response = "$firstname facciamo sti soldi";
+	$response = "Ciao $firstname, sono il bot di tiger trading, il mio compito è quello di inviare segnali di trading.";
+	$response = $response . "/nPer problemi contattate @mareefx.";
 }
 elseif(strpos($text, "/help") === 0)
 {
-	$response = "Prova ha un solo comando disponibile: /invio";
+	$response = "Ciao hai bisogno di aiuto?";
+}
+elseif($text == "si")
+{
+	$response  = "In caso di problemi puoi contattare @mareefx, ci dispiace per il disagio."
 }
 	
 $parameters = array('chat_id' => $chatId, "text" => $response);
