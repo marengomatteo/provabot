@@ -24,15 +24,15 @@ $response = '';
 if(strpos($text, "/start") === 0 || $text == 'ciao')
 {
 	$response = "Ciao $firstname, sono il bot di tiger trading, il mio compito è quello di inviare segnali di trading.";
-	$response = $response . "/nPer problemi contattate @mareefx.";
-}
-elseif($message == 'come va')
-{
-	$response = 'sono un bot, non ho uno stato fisico';
+	$response = $response . "Per problemi contattate @mareefx.";
 }
 elseif(strpos($text, "/help") === 0)
 {
 	$response = "Ciao hai bisogno di aiuto?";
+}
+elseif($message == 'si')
+{
+	$response = 'Per problemi puoi contattare @mareefx.';
 }
 	
 $parameters = array('chat_id' => $chatId, "text" => $response);
