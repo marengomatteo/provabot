@@ -21,18 +21,18 @@ $text = strtolower($text);
 header("Content-Type: application/json");
 $response = '';
 
-if(strpos($text, "/start") === 0)
+if(strpos($text, "/start") === 0 || $text == 'ciao')
 {
 	$response = "Ciao $firstname, sono il bot di tiger trading, il mio compito è quello di inviare segnali di trading.";
 	$response = $response . "/nPer problemi contattate @mareefx.";
 }
+elseif($message == 'come va')
+{
+	$response = 'sono un bot, non ho uno stato fisico';
+}
 elseif(strpos($text, "/help") === 0)
 {
 	$response = "Ciao hai bisogno di aiuto?";
-}
-elseif($text == "si")
-{
-	$response  = "In caso di problemi puoi contattare @mareefx, ci dispiace per il disagio."
 }
 	
 $parameters = array('chat_id' => $chatId, "text" => $response);
