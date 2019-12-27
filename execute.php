@@ -23,8 +23,8 @@ $response = '';
 
 if(strpos($text, "/start") === 0 || $text == 'ciao')
 {
-	$response = "Ciao $firstname, sono il bot di tiger trading, il mio compito è quello di inviare segnali di trading.";
-	$response = $response . "Per problemi contattate @mareefx.";
+	$response = "Ciao $firstname, sono il bot di tiger trading, il mio compito è quello di inviare segnali di trading.
+	Per problemi contattate @mareefx.";
 }
 elseif(strpos($text, "/help") === 0)
 {
