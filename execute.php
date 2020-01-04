@@ -33,6 +33,10 @@ elseif($text == 'si')
 {
 	$response = 'Per problemi puoi contattare @mareefx.';
 }
+elseif($text == 'no')
+{
+	$response = 'Perfetto sono felice che il bot funzioni bene';
+}
 	
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
