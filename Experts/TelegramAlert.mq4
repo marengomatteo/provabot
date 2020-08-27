@@ -1,18 +1,18 @@
 //+------------------------------------------------------------------+
 //|                                          TelegramSignalAlert.mq4 |
-//|                                              Olorunishola Falana |
-//|                                         sholafalana777@gmail.com |
+//|                                                   Matteo Marengo |
+//|                                       matteomarengo001@gmail.com |
 //+------------------------------------------------------------------+
-#property copyright "Olorunishola Falana"
-#property link      "sholafalana777@gmail.com"
+#property copyright "Matteo Marengo"
+#property link      "matteomarengo001@gmail.com"
 #property version   "1.00"
 #property strict
 #include <Telegram.mqh>
 
 //--- input parameters
-input string InpChannelName="@mychannelname";//Channel Name
-input string InpToken="insert telegram bot API here";//Token
-extern string mySigalname = "Enter my signal name";
+input string InpChannelName="@Tiger_tradingfx VIP";//Channel Name
+input string InpToken="599438608:AAGDKvYoKNk-583kUPY7iOf7LtyNbm-ezIY";//Token
+extern string mySigalname = "Fraaanx";
 
 //--- global variables
 CCustomBot bot;
